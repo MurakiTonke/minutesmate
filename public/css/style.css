@@ -1,0 +1,217 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, "Hiragino Sans", "Yu Gothic", sans-serif;
+  background: #f5f6fa;
+  color: #222;
+  margin: 0;
+  padding: 0 16px 48px;
+}
+
+header {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 0 8px;
+}
+
+header h1 {
+  margin: 0;
+  color: #2b3a67;
+}
+
+.tagline {
+  color: #666;
+  margin-top: 4px;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  margin-top: 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+form label {
+  display: block;
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #444;
+}
+
+form input,
+form textarea {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+button {
+  background: #2b3a67;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1e2a4d;
+}
+
+button:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+.nav-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nav-button {
+  display: block;
+  text-align: center;
+  background: #2b3a67;
+  color: #fff;
+  padding: 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-button:hover {
+  background: #1e2a4d;
+}
+
+.nav-button.secondary {
+  background: #eef0f6;
+  color: #2b3a67;
+}
+
+.nav-button.secondary:hover {
+  background: #dde1ec;
+}
+
+.link-btn {
+  background: none;
+  color: #888;
+  padding: 6px;
+  font-size: 13px;
+  align-self: center;
+}
+
+.link-btn:hover {
+  background: none;
+  color: #555;
+  text-decoration: underline;
+}
+
+.topbar {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 12px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar a {
+  color: #2b3a67;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.save-btn {
+  margin-top: 16px;
+  background: #2f7d4f;
+}
+
+.save-btn:hover {
+  background: #256240;
+}
+
+.todos-table input {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.saved-msg {
+  color: #2f7d4f;
+  font-size: 13px;
+  margin-left: 12px;
+}
+
+.delete-btn {
+  background: #fdecea;
+  color: #a33a2e;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+.delete-btn:hover {
+  background: #f8d5d0;
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 4px solid #ddd;
+  border-top-color: #2b3a67;
+  border-radius: 50%;
+  margin: 0 auto 12px;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+#loading {
+  text-align: center;
+  color: #555;
+}
+
+.error-card {
+  background: #fdecea;
+  color: #a33a2e;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+th {
+  color: #666;
+  font-weight: 600;
+}

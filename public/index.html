@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MinutesMate — ログイン</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<header>
+  <h1>MinutesMate</h1>
+  <p class="tagline">議事録を貼り付けるだけで、要約・決定事項・ToDoを自動抽出</p>
+</header>
+
+<main>
+  <section class="card">
+    <form id="login-form">
+      <label>
+        メールアドレス
+        <input type="email" id="email" value="demo@minutesmate.local" required />
+      </label>
+      <label>
+        パスワード
+        <input type="password" id="password" value="minutesmate123" required />
+      </label>
+      <button type="submit" id="login-btn">ログイン</button>
+    </form>
+  </section>
+
+  <section id="error" class="card error-card hidden"></section>
+</main>
+
+<script type="module" src="js/auth.js"></script>
+</body>
+</html>

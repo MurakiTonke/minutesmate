@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MinutesMate — 新しい議事録</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="topbar">
+  <a href="dashboard.html">← ダッシュボードに戻る</a>
+  <a href="todos.html">ToDo一覧</a>
+</div>
+
+<header>
+  <h1>新しい議事録</h1>
+  <p class="tagline">文字起こしを貼り付けて解析してください</p>
+</header>
+
+<main>
+  <section class="card">
+    <form id="meeting-form">
+      <label>
+        会議名
+        <input type="text" id="title" placeholder="第3回定例会議" />
+      </label>
+      <label>
+        参加者（カンマ区切り）
+        <input type="text" id="participants" placeholder="山田, 佐藤" />
+      </label>
+      <label>
+        文字起こし / メモ
+        <textarea id="raw-text" rows="10" placeholder="会議の文字起こしやメモを貼り付けてください" required></textarea>
+      </label>
+      <button type="submit" id="analyze-btn">解析する</button>
+    </form>
+  </section>
+
+  <section id="loading" class="card hidden">
+    <div class="spinner"></div>
+    <p>Ollamaが解析中です…（数秒〜十数秒かかります）</p>
+  </section>
+
+  <section id="error" class="card hidden error-card"></section>
+
+  <section id="result" class="card hidden">
+    <h2>要約</h2>
+    <p id="summary-text"></p>
+
+    <h2>決定事項</h2>
+    <ul id="decisions-list"></ul>
+
+    <h2>ToDo</h2>
+    <table id="todos-table" class="todos-table">
+      <thead>
+        <tr><th>内容</th><th>担当者</th><th>期限</th><th>操作</th></tr>
+      </thead>
+      <tbody id="todos-body"></tbody>
+    </table>
+    <button type="button" id="save-todos-btn" class="save-btn">ToDoを保存</button>
+    <span id="save-msg" class="saved-msg hidden">保存しました</span>
+  </section>
+</main>
+
+<script type="module" src="js/new-meeting.js"></script>
+</body>
+</html>

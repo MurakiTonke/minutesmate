@@ -1,0 +1,15 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 本デモではmeetings/todos/decisionsへの読み書きを全てCloud Functions（Admin SDK）
+    // 経由で行っている。Admin SDKはこのルールをバイパスするため、クライアントからの
+    // 直接アクセスはデフォルトで拒否する。
+    //
+    // 将来、フロントエンドから直接Firestoreへアクセスする構成に変更する場合は、
+    // usersコレクションとcompany_idによる企業単位のテナント分離ルールを追加すること。
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
